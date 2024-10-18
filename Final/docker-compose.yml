@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  vue-app:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    enviroment:
+      -NODE_ENV=development
+    command: npm run dev
